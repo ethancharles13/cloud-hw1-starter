@@ -1,0 +1,1014 @@
+﻿{
+    "Items": [
+        {
+            "insertedAtTimestamp": {
+                "N": "1759523424"
+            },
+            "yelp_data": {
+                "M": {
+                    "transactions": {
+                        "L": []
+                    },
+                    "distance": {
+                        "N": "1766.671225316132"
+                    }
+                }
+            },
+            "rating": {
+                "N": "4.2"
+            },
+            "coordinates": {
+                "M": {
+                    "latitude": {
+                        "N": "40.775881"
+                    },
+                    "longitude": {
+                        "N": "-73.981844"
+                    }
+                }
+            },
+            "review_count": {
+                "N": "123"
+            },
+            "url": {
+                "S": "https://www.yelp.com/biz/canto-upper-west-side-new-york-2?adjust_creative=Qju9j2Aby_j-MdspmASxTg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Qju9j2Aby_j-MdspmASxTg"
+            },
+            "cuisine_label": {
+                "S": "Italian"
+            },
+            "phone": {
+                "S": "(646) 360-3857"
+            },
+            "price": {
+                "NULL": true
+            },
+            "name": {
+                "S": "Canto - Upper West Side"
+            },
+            "location": {
+                "M": {
+                    "country": {
+                        "S": "US"
+                    },
+                    "address3": {
+                        "NULL": true
+                    },
+                    "address2": {
+                        "S": ""
+                    },
+                    "city": {
+                        "S": "New York"
+                    },
+                    "address1": {
+                        "S": "2014 Broadway"
+                    },
+                    "display_address": {
+                        "L": [
+                            {
+                                "S": "2014 Broadway"
+                            },
+                            {
+                                "S": "New York, NY 10023"
+                            }
+                        ]
+                    },
+                    "state": {
+                        "S": "NY"
+                    },
+                    "zip_code": {
+                        "S": "10023"
+                    }
+                }
+            },
+            "categories": {
+                "L": [
+                    {
+                        "S": "italian"
+                    },
+                    {
+                        "S": "cocktailbars"
+                    },
+                    {
+                        "S": "tapasmallplates"
+                    }
+                ]
+            },
+            "business_id": {
+                "S": "UHC5GxgWw6nQRYPQ_ljOsA"
+            },
+            "cuisine_key": {
+                "S": "italian"
+            },
+            "is_closed": {
+                "BOOL": false
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "S": "2025-10-04T00:10:50.381311+00:00"
+            },
+            "address": {
+                "S": "52 5th Ave, Brooklyn, NY 11217"
+            },
+            "name": {
+                "S": "5ive Spice"
+            },
+            "coordinates": {
+                "M": {
+                    "lat": {
+                        "N": "40.681442"
+                    },
+                    "lon": {
+                        "N": "-73.977241"
+                    }
+                }
+            },
+            "rating": {
+                "N": "4.3"
+            },
+            "review_count": {
+                "N": "1065"
+            },
+            "cuisine": {
+                "S": "vietnamese"
+            },
+            "business_id": {
+                "S": "SSDOkx5enfRH3nsniS_2jA"
+            },
+            "zip_code": {
+                "S": "11217"
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "S": "2025-10-03T23:54:49.086333+00:00"
+            },
+            "address": {
+                "S": "20 Skillman Ave, Brooklyn, NY 11211"
+            },
+            "name": {
+                "S": "Kings Co Imperial"
+            },
+            "coordinates": {
+                "M": {
+                    "lat": {
+                        "N": "40.71512"
+                    },
+                    "lon": {
+                        "N": "-73.95097"
+                    }
+                }
+            },
+            "rating": {
+                "N": "4"
+            },
+            "review_count": {
+                "N": "448"
+            },
+            "cuisine": {
+                "S": "dimsum"
+            },
+            "business_id": {
+                "S": "vZgJyMZlpSSS_Y-duxd4_A"
+            },
+            "zip_code": {
+                "S": "11211"
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "S": "2025-10-04T00:07:10.673341+00:00"
+            },
+            "address": {
+                "S": "10-91 Jackson Ave, New York, NY 11101"
+            },
+            "name": {
+                "S": "Ros Niyom Thai Restaurant"
+            },
+            "coordinates": {
+                "M": {
+                    "lat": {
+                        "N": "40.7432122"
+                    },
+                    "lon": {
+                        "N": "-73.951706"
+                    }
+                }
+            },
+            "rating": {
+                "N": "4.3"
+            },
+            "review_count": {
+                "N": "76"
+            },
+            "cuisine": {
+                "S": "thai"
+            },
+            "business_id": {
+                "S": "SkD3MrsLIT1Wq-7eTIE-mQ"
+            },
+            "zip_code": {
+                "S": "11101"
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "N": "1759527305"
+            },
+            "yelp_data": {
+                "M": {
+                    "transactions": {
+                        "L": [
+                            {
+                                "S": "pickup"
+                            },
+                            {
+                                "S": "delivery"
+                            }
+                        ]
+                    },
+                    "distance": {
+                        "N": "1616.1892093653285"
+                    }
+                }
+            },
+            "rating": {
+                "N": "3.9"
+            },
+            "coordinates": {
+                "M": {
+                    "latitude": {
+                        "N": "40.7625672"
+                    },
+                    "longitude": {
+                        "N": "-73.95956389999999"
+                    }
+                }
+            },
+            "review_count": {
+                "N": "432"
+            },
+            "url": {
+                "S": "https://www.yelp.com/biz/felice-64-new-york?adjust_creative=Qju9j2Aby_j-MdspmASxTg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Qju9j2Aby_j-MdspmASxTg"
+            },
+            "cuisine_label": {
+                "S": "Italian"
+            },
+            "phone": {
+                "S": "(212) 593-2223"
+            },
+            "price": {
+                "S": "$$"
+            },
+            "name": {
+                "S": "Felice 64"
+            },
+            "location": {
+                "M": {
+                    "country": {
+                        "S": "US"
+                    },
+                    "address3": {
+                        "S": ""
+                    },
+                    "address2": {
+                        "S": ""
+                    },
+                    "city": {
+                        "S": "New York"
+                    },
+                    "address1": {
+                        "S": "1166 1st Ave"
+                    },
+                    "display_address": {
+                        "L": [
+                            {
+                                "S": "1166 1st Ave"
+                            },
+                            {
+                                "S": "New York, NY 10065"
+                            }
+                        ]
+                    },
+                    "state": {
+                        "S": "NY"
+                    },
+                    "zip_code": {
+                        "S": "10065"
+                    }
+                }
+            },
+            "categories": {
+                "L": [
+                    {
+                        "S": "wine_bars"
+                    },
+                    {
+                        "S": "italian"
+                    },
+                    {
+                        "S": "venues"
+                    }
+                ]
+            },
+            "business_id": {
+                "S": "YE4pvo8ectzEaRYGqUgFcA"
+            },
+            "cuisine_key": {
+                "S": "italian"
+            },
+            "is_closed": {
+                "BOOL": false
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "S": "2025-10-04T00:10:38.012713+00:00"
+            },
+            "address": {
+                "S": "88 Liberty View Dr, Jersey City, NJ 07302"
+            },
+            "name": {
+                "S": "Zeppelin Hall"
+            },
+            "coordinates": {
+                "M": {
+                    "lat": {
+                        "N": "40.715132087537"
+                    },
+                    "lon": {
+                        "N": "-74.04667189924"
+                    }
+                }
+            },
+            "rating": {
+                "N": "3.4"
+            },
+            "review_count": {
+                "N": "976"
+            },
+            "cuisine": {
+                "S": "tradamerican"
+            },
+            "business_id": {
+                "S": "P5X8K61nDAlo8QrgCn-agQ"
+            },
+            "zip_code": {
+                "S": "07302"
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "S": "2025-10-04T00:08:58.168521+00:00"
+            },
+            "address": {
+                "S": "414 W 42nd St, New York, NY 10036"
+            },
+            "name": {
+                "S": "Chez Josephine"
+            },
+            "coordinates": {
+                "M": {
+                    "lat": {
+                        "N": "40.758628289225705"
+                    },
+                    "lon": {
+                        "N": "-73.9935057781295"
+                    }
+                }
+            },
+            "rating": {
+                "N": "3.8"
+            },
+            "review_count": {
+                "N": "707"
+            },
+            "cuisine": {
+                "S": "french"
+            },
+            "business_id": {
+                "S": "A8zppFZvBDGUKRSUrzJWMg"
+            },
+            "zip_code": {
+                "S": "10036"
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "S": "2025-10-03T23:54:52.406120+00:00"
+            },
+            "address": {
+                "S": "11 Pell St, New York, NY 10013"
+            },
+            "name": {
+                "S": "Taiwan Bear House"
+            },
+            "coordinates": {
+                "M": {
+                    "lat": {
+                        "N": "40.7147185237041"
+                    },
+                    "lon": {
+                        "N": "-73.9977966218067"
+                    }
+                }
+            },
+            "rating": {
+                "N": "3.9"
+            },
+            "review_count": {
+                "N": "382"
+            },
+            "cuisine": {
+                "S": "taiwanese"
+            },
+            "business_id": {
+                "S": "za9mYaRVWkwKkQfjRgvU0g"
+            },
+            "zip_code": {
+                "S": "10013"
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "N": "1759527305"
+            },
+            "yelp_data": {
+                "M": {
+                    "transactions": {
+                        "L": [
+                            {
+                                "S": "delivery"
+                            },
+                            {
+                                "S": "pickup"
+                            }
+                        ]
+                    },
+                    "distance": {
+                        "N": "825.587020152974"
+                    }
+                }
+            },
+            "rating": {
+                "N": "4.4"
+            },
+            "coordinates": {
+                "M": {
+                    "latitude": {
+                        "N": "40.7597"
+                    },
+                    "longitude": {
+                        "N": "-73.98823"
+                    }
+                }
+            },
+            "review_count": {
+                "N": "565"
+            },
+            "url": {
+                "S": "https://www.yelp.com/biz/allantico-vinaio-new-york?adjust_creative=Qju9j2Aby_j-MdspmASxTg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Qju9j2Aby_j-MdspmASxTg"
+            },
+            "cuisine_label": {
+                "S": "Italian"
+            },
+            "phone": {
+                "S": "(917) 970-0033"
+            },
+            "price": {
+                "S": "$$"
+            },
+            "name": {
+                "S": "All'Antico Vinaio"
+            },
+            "location": {
+                "M": {
+                    "country": {
+                        "S": "US"
+                    },
+                    "address3": {
+                        "S": ""
+                    },
+                    "address2": {
+                        "NULL": true
+                    },
+                    "city": {
+                        "S": "New York"
+                    },
+                    "address1": {
+                        "S": "729 8th Ave"
+                    },
+                    "display_address": {
+                        "L": [
+                            {
+                                "S": "729 8th Ave"
+                            },
+                            {
+                                "S": "New York, NY 10036"
+                            }
+                        ]
+                    },
+                    "state": {
+                        "S": "NY"
+                    },
+                    "zip_code": {
+                        "S": "10036"
+                    }
+                }
+            },
+            "categories": {
+                "L": [
+                    {
+                        "S": "italian"
+                    },
+                    {
+                        "S": "sandwiches"
+                    }
+                ]
+            },
+            "business_id": {
+                "S": "qKfD10PsDKP_9B7O1_7oJQ"
+            },
+            "cuisine_key": {
+                "S": "italian"
+            },
+            "is_closed": {
+                "BOOL": false
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "S": "2025-10-04T00:07:13.570529+00:00"
+            },
+            "address": {
+                "S": "295 5th Ave, Brooklyn, NY 11215"
+            },
+            "name": {
+                "S": "Prem Thai Restaurant and Noodle Bar"
+            },
+            "coordinates": {
+                "M": {
+                    "lat": {
+                        "N": "40.673461"
+                    },
+                    "lon": {
+                        "N": "-73.982436"
+                    }
+                }
+            },
+            "rating": {
+                "N": "4.4"
+            },
+            "review_count": {
+                "N": "60"
+            },
+            "cuisine": {
+                "S": "thai"
+            },
+            "business_id": {
+                "S": "auwKGNIFD1-7aNxLb5wdqg"
+            },
+            "zip_code": {
+                "S": "11215"
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "N": "1759527305"
+            },
+            "yelp_data": {
+                "M": {
+                    "transactions": {
+                        "L": [
+                            {
+                                "S": "delivery"
+                            }
+                        ]
+                    },
+                    "distance": {
+                        "N": "1368.5575851357064"
+                    }
+                }
+            },
+            "rating": {
+                "N": "3.6"
+            },
+            "coordinates": {
+                "M": {
+                    "latitude": {
+                        "N": "40.750826"
+                    },
+                    "longitude": {
+                        "N": "-73.989115"
+                    }
+                }
+            },
+            "review_count": {
+                "N": "815"
+            },
+            "url": {
+                "S": "https://www.yelp.com/biz/stella-34-trattoria-new-york?adjust_creative=Qju9j2Aby_j-MdspmASxTg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=Qju9j2Aby_j-MdspmASxTg"
+            },
+            "cuisine_label": {
+                "S": "Italian"
+            },
+            "phone": {
+                "S": "(212) 967-9251"
+            },
+            "price": {
+                "S": "$$$"
+            },
+            "name": {
+                "S": "Stella 34 Trattoria"
+            },
+            "location": {
+                "M": {
+                    "country": {
+                        "S": "US"
+                    },
+                    "address3": {
+                        "S": ""
+                    },
+                    "address2": {
+                        "S": ""
+                    },
+                    "city": {
+                        "S": "New York"
+                    },
+                    "address1": {
+                        "S": "151 W 34th St"
+                    },
+                    "display_address": {
+                        "L": [
+                            {
+                                "S": "151 W 34th St"
+                            },
+                            {
+                                "S": "New York, NY 10001"
+                            }
+                        ]
+                    },
+                    "state": {
+                        "S": "NY"
+                    },
+                    "zip_code": {
+                        "S": "10001"
+                    }
+                }
+            },
+            "categories": {
+                "L": [
+                    {
+                        "S": "italian"
+                    },
+                    {
+                        "S": "cocktailbars"
+                    },
+                    {
+                        "S": "venues"
+                    }
+                ]
+            },
+            "business_id": {
+                "S": "MoyxzhaYIsJx-p9IuGGK4w"
+            },
+            "cuisine_key": {
+                "S": "italian"
+            },
+            "is_closed": {
+                "BOOL": false
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "S": "2025-10-03T23:54:45.867796+00:00"
+            },
+            "address": {
+                "S": "13 St Marks Pl, New York, NY 10003"
+            },
+            "name": {
+                "S": "The Bao"
+            },
+            "coordinates": {
+                "M": {
+                    "lat": {
+                        "N": "40.72939"
+                    },
+                    "lon": {
+                        "N": "-73.9889199"
+                    }
+                }
+            },
+            "rating": {
+                "N": "3.8"
+            },
+            "review_count": {
+                "N": "1474"
+            },
+            "cuisine": {
+                "S": "shanghainese"
+            },
+            "business_id": {
+                "S": "SNhDVaf_n7VDZcfry8mYdA"
+            },
+            "zip_code": {
+                "S": "10003"
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "S": "2025-10-04T00:08:19.408662+00:00"
+            },
+            "address": {
+                "S": "440 West 33rd St, Ste 100, New York, NY 10001"
+            },
+            "name": {
+                "S": "Ci Siamo"
+            },
+            "coordinates": {
+                "M": {
+                    "lat": {
+                        "N": "40.75240549384363"
+                    },
+                    "lon": {
+                        "N": "-73.9982864846782"
+                    }
+                }
+            },
+            "rating": {
+                "N": "4.4"
+            },
+            "review_count": {
+                "N": "722"
+            },
+            "cuisine": {
+                "S": "italian"
+            },
+            "business_id": {
+                "S": "LkV96_buOU_n0br4SBO57w"
+            },
+            "zip_code": {
+                "S": "10001"
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "S": "2025-10-04T00:07:33.584987+00:00"
+            },
+            "address": {
+                "S": "253 Broome St, New York, NY 10002"
+            },
+            "name": {
+                "S": "Barrio Chino"
+            },
+            "coordinates": {
+                "M": {
+                    "lat": {
+                        "N": "40.718022"
+                    },
+                    "lon": {
+                        "N": "-73.990026"
+                    }
+                }
+            },
+            "rating": {
+                "N": "3.9"
+            },
+            "review_count": {
+                "N": "1212"
+            },
+            "cuisine": {
+                "S": "mexican"
+            },
+            "business_id": {
+                "S": "RzKR9QcYP03EQ_8DxTxowg"
+            },
+            "zip_code": {
+                "S": "10002"
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "S": "2025-10-04T00:07:36.331018+00:00"
+            },
+            "address": {
+                "S": "242 Metropolitan Ave, Brooklyn, NY 11211"
+            },
+            "name": {
+                "S": "Tacombi"
+            },
+            "coordinates": {
+                "M": {
+                    "lat": {
+                        "N": "40.714826088301294"
+                    },
+                    "lon": {
+                        "N": "-73.95944510183506"
+                    }
+                }
+            },
+            "rating": {
+                "N": "4.3"
+            },
+            "review_count": {
+                "N": "228"
+            },
+            "cuisine": {
+                "S": "mexican"
+            },
+            "business_id": {
+                "S": "M6XZ8IIOGmBfh79vk79Eqw"
+            },
+            "zip_code": {
+                "S": "11211"
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "S": "2025-10-04T00:08:55.299859+00:00"
+            },
+            "address": {
+                "S": "103 Havemeyer St, Brooklyn, NY 11211"
+            },
+            "name": {
+                "S": "Recette"
+            },
+            "coordinates": {
+                "M": {
+                    "lat": {
+                        "N": "40.71326399774355"
+                    },
+                    "lon": {
+                        "N": "-73.95637202012806"
+                    }
+                }
+            },
+            "rating": {
+                "N": "4.6"
+            },
+            "review_count": {
+                "N": "169"
+            },
+            "cuisine": {
+                "S": "french"
+            },
+            "business_id": {
+                "S": "ILwCoB-PD8n9ObGk_sac0A"
+            },
+            "zip_code": {
+                "S": "11211"
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "S": "2025-10-04T00:07:10.673341+00:00"
+            },
+            "address": {
+                "S": "151 Montague St, Brooklyn, NY 11201"
+            },
+            "name": {
+                "S": "Xisan De Classic"
+            },
+            "coordinates": {
+                "M": {
+                    "lat": {
+                        "N": "40.694732"
+                    },
+                    "lon": {
+                        "N": "-73.993237"
+                    }
+                }
+            },
+            "rating": {
+                "N": "4.7"
+            },
+            "review_count": {
+                "N": "30"
+            },
+            "cuisine": {
+                "S": "thai"
+            },
+            "business_id": {
+                "S": "GEVdYaM-oPtiq7DjxkQlyw"
+            },
+            "zip_code": {
+                "S": "11201"
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "S": "2025-10-04T00:07:07.847511+00:00"
+            },
+            "address": {
+                "S": "1590 Lexington Ave, New York, NY 10029"
+            },
+            "name": {
+                "S": "Chu Ros Thai"
+            },
+            "coordinates": {
+                "M": {
+                    "lat": {
+                        "N": "40.78922"
+                    },
+                    "lon": {
+                        "N": "-73.94873"
+                    }
+                }
+            },
+            "rating": {
+                "N": "4.5"
+            },
+            "review_count": {
+                "N": "258"
+            },
+            "cuisine": {
+                "S": "thai"
+            },
+            "business_id": {
+                "S": "jfnDwWBGK4JoWE5jbeKxSw"
+            },
+            "zip_code": {
+                "S": "10029"
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "S": "2025-10-04T00:08:05.409914+00:00"
+            },
+            "address": {
+                "S": "255 Smith St, Brooklyn, NY 11231"
+            },
+            "name": {
+                "S": "Karazishi Botan"
+            },
+            "coordinates": {
+                "M": {
+                    "lat": {
+                        "N": "40.68312"
+                    },
+                    "lon": {
+                        "N": "-73.99278"
+                    }
+                }
+            },
+            "rating": {
+                "N": "4.5"
+            },
+            "review_count": {
+                "N": "130"
+            },
+            "cuisine": {
+                "S": "ramen"
+            },
+            "business_id": {
+                "S": "Lz_9RXFKmOaSA4IpgV6NlA"
+            },
+            "zip_code": {
+                "S": "11231"
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "S": "2025-10-04T00:08:04.923515+00:00"
+            },
+            "address": {
+                "S": "187 Orchard St, New York, NY 10002"
+            },
+            "name": {
+                "S": "Blue Ribbon Sushi Izakaya"
+            },
+            "coordinates": {
+                "M": {
+                    "lat": {
+                        "N": "40.722147196792015"
+                    },
+                    "lon": {
+                        "N": "-73.9884386705522"
+                    }
+                }
+            },
+            "rating": {
+                "N": "3.9"
+            },
+            "review_count": {
+                "N": "612"
+            },
+            "cuisine": {
+                "S": "sushi"
+            },
+            "business_id": {
+                "S": "TeBthQZ2xpxyvXheS08ovw"
+            },
+            "zip_code": {
+                "S": "10002"
+            }
+        },
+        {
+            "insertedAtTimestamp": {
+                "S": "2025-10-03T23:54:49.086333+00:00"
+            },
+            "address": {
+                "S": "258 W 44th St, New York, NY 10036"
+            },
+            "name": {
+                "S": 

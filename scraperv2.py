@@ -33,7 +33,7 @@ import requests
 YELP_API_URL = "https://api.yelp.com/v3/businesses/search"
 PAGE_LIMIT = 50   # Yelp max per request
 MAX_OFFSET = 1000 # Yelp caps offset; be mindful
-DEFAULT_MIN_RESULTS = 200
+DEFAULT_MIN_RESULTS = 300
 DEFAULT_TABLE = "yelp-restaurants"
 DEFAULT_REGION = os.getenv("AWS_REGION", "us-east-1")
 DEFAULT_DDB_ENDPOINT = "http://localhost:8000"
