@@ -1,6 +1,12 @@
 var checkout = {};
 
 $(document).ready(function() {
+    // Generate or retrieve a unique session ID
+    if (!sessionStorage.getItem("lexSessionId")) {
+        const newSessionId = "session-" + Date.now() + "-" + Math.random().toString(36).substring(2, 8);
+        sessionStorage.setItem("lexSessionId", newSessionId);
+}
+const sessionId = sessionStorage.getItem("lexSessionId");
   var $messages = $('.messages-content'),
     d, h, m,
     i = 0;
@@ -28,6 +34,7 @@ $(document).ready(function() {
   function callChatbotApi(message) {
     // params, body, additionalParams
     return sdk.chatbotPost({}, {
+      sessionId: sessionId,    
       messages: [{
         type: 'unstructured',
         unstructured: {
@@ -110,5 +117,4 @@ $(document).ready(function() {
       i++;
     }, 500);
   }
-
 });
