@@ -46,6 +46,7 @@ def _search_top_restaurants_by_cuisine(cuisine: str, limit: int = RESULT_LIMIT) 
     Returns top hits with at least fields: business_id (must be indexed in OpenSearch).
     You can tweak the query (e.g., boost rating, popularity, etc.).
     """
+    logger.info("Inside search top restaurants")
     query = {
         "size": limit,
         "query": {
@@ -67,6 +68,7 @@ def _batch_get_businesses(business_ids: List[str]) -> Dict[str, Dict]:
     Batch-get from DynamoDB by primary key 'business_id' (String).
     Returns whatever attributes are present in DynamoDB for each business.
     """
+    logger.info("Inside batch get businesses")
     if not business_ids:
         return {}
 
@@ -125,6 +127,7 @@ def _format_email_text(city: str, time: str, num_people: int, cuisine: str, busi
     return "\n".join(lines)
 
 def _send_email(to_email: str, subject: str, html_body: str, text_body: str):
+    logger.info("Inside send email")
     ses.send_email(
         Source=SES_SENDER,
         Destination={"ToAddresses": [to_email]},
@@ -137,16 +140,19 @@ def _send_email(to_email: str, subject: str, html_body: str, text_body: str):
         },
     )
 
-def _process_one_message(msg_body: Dict):
+def _process_one_message(msg_body):
     """
     msg_body expects: cuisine, email, city, time, num_people
     """
+    logger.info("Inside process_one_message")
+    logger.info("msg_body: %s", json.dumps(msg_body))
     cuisine = msg_body["cuisine"]
-    email = msg_body["email"]
+    num_people = int(msg_body["count"])  # cast to int
+    time_str = msg_body["dining_time"]
     city = msg_body["city"]
-    time_str = msg_body["diningTime"]
-    num_people = int(msg_body["count"])
-
+    email = msg_body["email"]
+    date = msg_body["date"]
+    location = msg_body["location"]
     hits = _search_top_restaurants_by_cuisine(cuisine, RESULT_LIMIT)
     business_ids = []
     for h in hits:
@@ -164,78 +170,54 @@ def _process_one_message(msg_body: Dict):
     text = _format_email_text(city, time_str, num_people, cuisine, ordered_items)
     _send_email(email, subject, html, text)
 
-def _sqs_strattr(record: dict, *names: str, required: bool = True) -> str | None:
-    # Prefer user message attributes
-    attrs = record.get("messageAttributes") or {}
-    for n in names:
-        v = attrs.get(n)
-        if v and (v.get("dataType") or v.get("DataType")) == "String":
-            sv = v.get("stringValue") or v.get("StringValue")
-            if sv:
-                return sv
-    # Fallback: some test payloads put user data incorrectly under `attributes`
-    sysattrs = record.get("attributes") or {}
-    for n in names:
-        if n in sysattrs and sysattrs[n] != "":
-            return sysattrs[n]
-    if required:
-        raise ValueError(f"Missing SQS message attribute (tried: {', '.join(names)})")
-    return None
-
 def lambda_handler(event, context):
-    """
-    SQS -> Lambda with a blank body and attributes:
-    City (or city), count, cuisine, date, diningTime, email, location.
-    Builds the pipeline message expected by _process_one_message().
-    Returns partial batch response so only failed records are retried.
-    """
-    failures = []
+    try:
+        logger.info("EVENT: %s", json.dumps(event))
+        """
+        SQS -> Lambda with a blank body and attributes:
+        City (or city), count, cuisine, date, diningTime, email, location.
+        Builds the pipeline message expected by _process_one_message().
+        Returns partial batch response so only failed records are retried.
+        """
+        logger.info("Before talking to SQS")
+        #connect to q1/new code
+        sqs = boto3.client('sqs', region_name='us-east-1')
+        queue_url = 'https://sqs.us-east-1.amazonaws.com/346225466066/Q1'
+        response = sqs.receive_message(QueueUrl=queue_url, 
+                                        MaxNumberOfMessages=1, 
+                                        WaitTimeSeconds=1, 
+                                        MessageAttributeNames=['All'])
+        logger.info("SQS response: %s", json.dumps(response, indent=2))
+        messages = response.get('Messages', [])
+        if not messages:
+            logger.info("No messages received.")
+        logger.info("before for loop")
+        for message in messages:
+            attrs = message.get('MessageAttributes', {})
+            city = attrs.get('city', {}).get('StringValue')
+            count = attrs.get('count', {}).get('StringValue')
+            cuisine = attrs.get('cuisine', {}).get('StringValue')
+            date = attrs.get('date', {}).get('StringValue')
+            dining_time = attrs.get('diningTime', {}).get('StringValue')
+            email = attrs.get('email', {}).get('StringValue')
+            location = attrs.get('location', {}).get('StringValue')
+            logger.debug(f"Full message: {message}")
 
-    for record in event.get("Records", []):
-        message_id = record.get("messageId")
-        try:
-            # Read all attributes as strings
-            city        = _sqs_strattr(record, "City", "city")
-            count_str   = _sqs_strattr(record, "count")
-            cuisine     = _sqs_strattr(record, "cuisine")
-            date        = _sqs_strattr(record, "date")
-            dining_time = _sqs_strattr(record, "diningTime")
-            email       = _sqs_strattr(record, "email")
-            location    = _sqs_strattr(record, "location")
-
-            # Derive fields expected by your processing pipeline
-            try:
-                num_people = int(count_str)
-            except ValueError:
-                raise ValueError(f"Attribute 'count' is not an integer: {count_str!r}")
-
-            name_guess = email.split("@", 1)[0].replace(".", " ").title()
-            time_str = f"{date} {dining_time}"
-
-            # Message for _process_one_message (keeps pass-throughs too)
-            msg = {
-                "cuisine": cuisine,
-                "email": email,
-                "name": name_guess,
-                "time": time_str,
-                "number_of_people": num_people,
-
-                # pass-throughs if you want them later
-                "city": city,
-                "date": date,
-                "diningTime": dining_time,
-                "location": location,
-                "count": count_str
+            msg_body = {
+            "city": city,
+            "count": count,
+            "cuisine": cuisine,
+            "date": date,
+            "dining_time": dining_time,
+            "email": email,
+            "location": location
             }
-
-            _process_one_message(msg)
-            logger.info(
-                "Processed message %s for %s (%s %s, party=%s, city=%s, location=%s)",
-                message_id, email, date, dining_time, num_people, city, location
+            logger.info("After talking to sqs")
+            _process_one_message(msg_body)
+            sqs.delete_message(
+            QueueUrl=queue_url,
+            ReceiptHandle=receipt_handle
             )
 
-        except Exception as e:
-            logger.exception("Failed processing message %s: %s", message_id, e)
-            failures.append({"itemIdentifier": message_id})
-
-    return {"batchItemFailures": failures}
+    except Exception as e:
+        logger.info("Error: %s", e)
